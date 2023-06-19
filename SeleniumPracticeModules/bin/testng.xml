@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test  preserve-order="true" name="Myntra">
+        <parameter name="url" value="https://www.myntra.com/"/>
+        <classes>
+            <class name="TestCases.WindowHandlingTest"/>
+            <class name="TestCases.ScrollingPageTest"/>
+        </classes>
+    </test>
+   <test name="HerokuApp">
+        <parameter name="url" value="https://the-internet.herokuapp.com/javascript_alerts"/>
+        <classes>
+            <class name="TestCases.AlertHandlingTest"/>
+            <class name="TestCases.DropdownTest"></class>
+        </classes>
+    </test>
+    <test name="HerokuApp">
+        <parameter name="url" value="https://the-internet.herokuapp.com/javascript_alerts"/>
+        <classes>
+            <class name="TestCases.DropdownTest"></class>
+        </classes>
+    </test>
+
+</suite>

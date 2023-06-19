@@ -1,0 +1,4 @@
+TestCases\DropdownTest.class
+TestCases\ScrollingPageTest.class
+TestCases\AlertHandlingTest.class
+TestCases\WindowHandlingTest.class
