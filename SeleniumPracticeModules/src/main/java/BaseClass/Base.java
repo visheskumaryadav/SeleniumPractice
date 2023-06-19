@@ -1,25 +1,30 @@
 package BaseClass;
 
-import ConfigurationClass.ConfigurationData;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
+
+import ConfigurationClass.ConfigurationData;
 
 public class Base {
     protected WebDriver driver;
+    
+    @Parameters({"url"})
     @BeforeClass
-    public void launchBrowser(){
+    public void launchBrowser(String URL){
         ConfigurationData.setConfiguration();
         if(ConfigurationData.getBrowserName().equalsIgnoreCase("chrome")){
             driver=new ChromeDriver();
-            driver.get(ConfigurationData.getURL());
-            driver.manage().window().maximize();
+          //  driver.manage().window().maximize();
+            driver.get(URL);
+
         }
         else if(ConfigurationData.getBrowserName().equalsIgnoreCase("firefox")){
             driver=new FirefoxDriver();
-            driver.get(ConfigurationData.getURL());
+            driver.get(URL); 
             driver.manage().window().maximize();
         }
     }

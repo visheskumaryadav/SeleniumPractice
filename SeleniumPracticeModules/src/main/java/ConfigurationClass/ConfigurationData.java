@@ -6,6 +6,7 @@ import java.util.Properties;
 public class ConfigurationData {
     static Properties prop;
     public static void setConfiguration(){
+        ExtentReportMaker.createReport();
         try{
             String path=System.getProperty("user.dir")+"\\ConfigurationFiles\\configuration.properties";
             FileReader file=new FileReader(path);
