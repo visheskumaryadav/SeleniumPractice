@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Alerts(failed)" verbose="0">
+    <parameter name="url" value="https://the-internet.herokuapp.com/"/>
+    <classes>
+      <class name="TestCases.AlertHandling">
+        <methods>
+          <include name="openAlertScreen"/>
+          <include name="inputAlert"/>
+          <include name="close"/>
+          <include name="moveBackToHomeScreen"/>
+          <include name="confirmAlert"/>
+          <include name="openPage"/>
+        </methods>
+      </class> <!-- TestCases.AlertHandling -->
+    </classes>
+  </test> <!-- Alerts(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

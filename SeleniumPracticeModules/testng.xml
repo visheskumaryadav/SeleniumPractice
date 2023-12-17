@@ -1,32 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test  preserve-order="true" name="Myntra">
-        <parameter name="url" value="https://www.myntra.com/"/>
-        <classes>
 
-            <class name="TestCases.WindowHandlingTest"/>
-            <class name="TestCases.ScrollingPageTest"/>
-        </classes>
-    </test>
-    <test preserve-order="true" name="HerokuApp ">
-        <parameter name="url" value="https://the-internet.herokuapp.com/javascript_alerts"/>
-        <classes>
-            <class name="TestCases.AlertHandlingTest"/>
-        </classes>
-    </test>
-    <test preserve-order="true" name="Iframes">
-        <parameter name="url" value="https://demo.guru99.com/test/guru99home/"/>
-        <classes>
-            <class name="TestCases.IframeHandlingTest"/>
-        </classes>
-    </test>
-    <test preserve-order="true" name="SearchingTest">
-        <parameter name="url" value="https://www.flipkart.com/"/>
-        <classes>
-            <class name="TestCases.SearchingTest"/>
-        </classes>
-    </test>
-
-
+        <test  preserve-order="true" name="Alerts">
+            <parameter name="url" value="https://the-internet.herokuapp.com/"/>
+            <classes>
+                <class name="TestCases.AlertHandling"/>
+            </classes>
+        </test>
 </suite>
